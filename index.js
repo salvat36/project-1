@@ -10,13 +10,18 @@ const spotlightImg = document.querySelector("#spotlight-img") // spotLight Image
 
 
 //! HELPER FUNCTIONS
-const spotlightEpisode = (episodeObj) => {
-spotlightSeason.innerText = ADD-SEASON-NAMES-HERE
+// const spotlightEpisode = (episodeObj) => {
+// img.src = 
+// img.alt = 
 
+// }
+
+
+const renderSeason = (seasonObj) => {
+    const seasonImg = document.createElement("img")
+    seasonImg.src = seasonObj.image
+    nav.append(seasonImg)
 }
-
-
-
 
 
 
@@ -25,7 +30,9 @@ function fetchEpisode(url) {
     fetch(url)
     .then (res => res.json())
     .then (episodes => episodes.forEach(episode => {
-        spotlightEpisode(episode);
+        console.log(episode)
+        renderSeason(episode)
+        // spotlightEpisode(episode);
     }));
 }
 fetchEpisode("http://localhost:3000/season1");

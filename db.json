@@ -6,6 +6,9 @@
       "prev": null
     },
     "season1": [
+    {
+    "image": "images/season1.png"    
+    },
       {
         "id": 1,
         "name": "Pilot",
@@ -107,6 +110,9 @@
     ],
     "season2": [
     {
+    "image": "images/season2.png"    
+    },
+    {
       "season_name": "Season 2",   
       "id": 12,
       "name": "A Rickle in Time",
@@ -189,6 +195,9 @@
       }   
     ],
     "season3": [
+    {
+    "image": "images/season3.png"    
+    },
     {
         "season_name": "Season 3",
         "id": 22,
@@ -273,6 +282,9 @@
     ],
     "season4": [
     {
+    "image": "images/season4.png"    
+    },
+    {
         "season_name": "Season 4",
         "id": 32,
         "name": "Edge of Tomorty: Rick, Die, Rickpeat",
@@ -356,6 +368,9 @@
 
     ],
     "season5": [
+    {
+    "image": "images/season3.png"    
+    },
     {
         "season_name": "Season 5",
         "id": 42,
