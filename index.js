@@ -28,9 +28,15 @@ const renderSeason = (seasonObj) => {
     const seasonName = document.createElement("h2")
     seasonName.innerText = seasonObj[0].season_name
     nav.append(seasonName, seasonImg)
+    seasonImg.addEventListener("click", () => handleNavClick(seasonObj))
 }
 
 
+
+const handleNavClick = (seasonClick) => {
+    spotlightEpisodeList.innerHTML = ""
+    spotlightEpisode(seasonClick);
+}
 
 
 
@@ -42,6 +48,7 @@ function fetchSeason1(url) {
     .then (episodes => { 
         renderSeason(episodes)
         spotlightEpisode(episodes);
+        handleNavClick(episodes)
     })};
 fetchSeason1("http://localhost:3000/season1");
 
@@ -51,7 +58,7 @@ function fetchSeason2(url) {
     .then (res => res.json())
     .then (episodes => { 
         renderSeason(episodes)
-        // spotlightEpisode(episode);
+        handleNavClick(episodes)
     })};
 fetchSeason2("http://localhost:3000/season2");
 
