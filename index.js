@@ -5,6 +5,8 @@ const seasonList = document.querySelector("#season-list") // name of all seasons
 const spotlightSeason = document.querySelector("#spotlight-season") // spotlight spot for season names
 const spotlightEpisodeList = document.querySelector(".episodes-list") // Episode List goes here
 const spotlightImg = document.querySelector("#spotlight-img") // spotLight Images go here
+const seasonDropdown = document.querySelector("#season-dropdown")
+const charDropdown = document.querySelector("#char-dropdown")
 
 
 
@@ -15,10 +17,12 @@ const spotlightEpisode = (episodeObj) => {
 spotlightImg.src = episodeObj[0].image
 episodeObj.forEach(episode => {
     let episodeList = document.createElement("li")
-    episodeList.innerText = episode.name
-    spotlightEpisodeList.append(episodeList)       
+    episodeList.innerText = episode.name 
+    spotlightEpisodeList.append(episodeList)  
 })
 }
+
+
 
 
 //Function renders each seasons title and image and appends it to nav
@@ -91,3 +95,24 @@ function fetchSeason5(url) {
         // spotlightEpisode(episode);
     })};
 fetchSeason5("http://localhost:3000/season5");
+
+
+
+//renderCharForOption
+function renderCharForOption(charObj) {
+    let charOption = document.createElement("option")
+    charOption.value = charObj.name 
+    charOption.innerText = charObj.name
+    charDropdown.append(charOption)
+}
+
+
+//FETCH function for character
+fetch ("https://rickandmortyapi.com/api/character")
+.then (response => response.json())
+.then (charNames => {
+    
+    charNames.results.forEach(charName => renderCharForOption(charName))
+    
+})
+
