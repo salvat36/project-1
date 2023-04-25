@@ -10,11 +10,20 @@ const spotlightImg = document.querySelector("#spotlight-img") // spotLight Image
 
 
 //! HELPER FUNCTIONS
-// const spotlightEpisode = (episodeObj) => {
-// img.src = 
-// img.alt = 
+const spotlightEpisode = (episodeObj) => {
+spotlightImg.src = episodeObj[0].image
+episodeObj.forEach(episode => {
+    let episodeList = document.createElement("li")
+    episodeList.innerText = episode.name
+    spotlightEpisodeList.append(episodeList)       
+})
+}
 
-// }
+const renderSeason = (seasonObj) => {
+    const seasonImg = document.createElement("img")
+    seasonImg.src = seasonObj[0].image
+    nav.append(seasonImg)
+}
 
 
 
@@ -27,7 +36,7 @@ function fetchSeason1(url) {
     .then (res => res.json())
     .then (episodes => { 
         renderSeason(episodes)
-        // spotlightEpisode(episode);
+        spotlightEpisode(episodes);
     })};
 fetchSeason1("http://localhost:3000/season1");
 
@@ -66,10 +75,4 @@ function fetchSeason5(url) {
         // spotlightEpisode(episode);
     })};
 fetchSeason5("http://localhost:3000/season5");
-
-const renderSeason = (seasonObj) => {
-    const seasonImg = document.createElement("img")
-    seasonImg.src = seasonObj[0].image
-    nav.append(seasonImg)
-}
 

@@ -6,9 +6,7 @@
       "prev": null
     },
     "season1": [
-    {
-    "image": "images/season1.png"    
-    },
+    
       {
         "id": 1,
         "name": "Pilot",
@@ -282,7 +280,7 @@
     ],
     "season4": [
     {
-    "image": "images/season4.png"    
+    "image": "images/season4.jpg"    
     },
     {
         "season_name": "Season 4",
@@ -369,7 +367,7 @@
     ],
     "season5": [
     {
-    "image": "images/season3.png"    
+    "image": "images/season5.jpg"    
     },
     {
         "season_name": "Season 5",
