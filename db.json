@@ -1,13 +1,8 @@
 {
-    "info": {
-      "count": 51,
-      "pages": 3,
-      "next": "https://rickandmortyapi.com/api/episode?page=2",
-      "prev": null
-    },
     "season1": [
-    
       {
+        "image": "images/season1.png",
+        "season_name": "Season 1",
         "id": 1,
         "name": "Pilot",
         "air_date": "December 2, 2013",
@@ -108,9 +103,7 @@
     ],
     "season2": [
     {
-    "image": "images/season2.png"    
-    },
-    {
+      "image": "images/season2.png",  
       "season_name": "Season 2",   
       "id": 12,
       "name": "A Rickle in Time",
@@ -194,9 +187,7 @@
     ],
     "season3": [
     {
-    "image": "images/season3.png"    
-    },
-    {
+        "image": "images/season3.png",
         "season_name": "Season 3",
         "id": 22,
         "name": "The Rickshank Rickdemption",
@@ -280,9 +271,7 @@
     ],
     "season4": [
     {
-    "image": "images/season4.jpg"    
-    },
-    {
+        "image": "images/season4.jpg",
         "season_name": "Season 4",
         "id": 32,
         "name": "Edge of Tomorty: Rick, Die, Rickpeat",
@@ -367,9 +356,7 @@
     ],
     "season5": [
     {
-    "image": "images/season5.jpg"    
-    },
-    {
+        "image": "images/season5.jpg",
         "season_name": "Season 5",
         "id": 42,
         "name": "Mort Dinner Rick Andre",

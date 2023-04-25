@@ -10,6 +10,7 @@ const spotlightImg = document.querySelector("#spotlight-img") // spotLight Image
 
 
 //! HELPER FUNCTIONS
+//Function renders season 1 data to page on load
 const spotlightEpisode = (episodeObj) => {
 spotlightImg.src = episodeObj[0].image
 episodeObj.forEach(episode => {
@@ -19,10 +20,14 @@ episodeObj.forEach(episode => {
 })
 }
 
+
+//Function renders each seasons title and image and appends it to nav
 const renderSeason = (seasonObj) => {
     const seasonImg = document.createElement("img")
     seasonImg.src = seasonObj[0].image
-    nav.append(seasonImg)
+    const seasonName = document.createElement("h2")
+    seasonName.innerText = seasonObj[0].season_name
+    nav.append(seasonName, seasonImg)
 }
 
 
@@ -30,7 +35,7 @@ const renderSeason = (seasonObj) => {
 
 
 
-
+// Functions GETS Season 1 Data
 function fetchSeason1(url) {
     fetch(url)
     .then (res => res.json())
@@ -40,6 +45,7 @@ function fetchSeason1(url) {
     })};
 fetchSeason1("http://localhost:3000/season1");
 
+// Functions GETS Season 2 Data
 function fetchSeason2(url) {
     fetch(url)
     .then (res => res.json())
@@ -49,6 +55,7 @@ function fetchSeason2(url) {
     })};
 fetchSeason2("http://localhost:3000/season2");
 
+// Functions GETS Season 3 Data
 function fetchSeason3(url) {
     fetch(url)
     .then (res => res.json())
@@ -58,6 +65,7 @@ function fetchSeason3(url) {
     })};
 fetchSeason3("http://localhost:3000/season3");
 
+// Functions GETS Season 4 Data
 function fetchSeason4(url) {
     fetch(url)
     .then (res => res.json())
@@ -67,6 +75,7 @@ function fetchSeason4(url) {
     })};
 fetchSeason4("http://localhost:3000/season4");
 
+// Functions GETS Season 5 Data
 function fetchSeason5(url) {
     fetch(url)
     .then (res => res.json())
