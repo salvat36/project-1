@@ -17,22 +17,59 @@ const spotlightImg = document.querySelector("#spotlight-img") // spotLight Image
 // }
 
 
+
+
+
+
+
+function fetchSeason1(url) {
+    fetch(url)
+    .then (res => res.json())
+    .then (episodes => { 
+        renderSeason(episodes)
+        // spotlightEpisode(episode);
+    })};
+fetchSeason1("http://localhost:3000/season1");
+
+function fetchSeason2(url) {
+    fetch(url)
+    .then (res => res.json())
+    .then (episodes => { 
+        renderSeason(episodes)
+        // spotlightEpisode(episode);
+    })};
+fetchSeason2("http://localhost:3000/season2");
+
+function fetchSeason3(url) {
+    fetch(url)
+    .then (res => res.json())
+    .then (episodes => { 
+        renderSeason(episodes)
+        // spotlightEpisode(episode);
+    })};
+fetchSeason3("http://localhost:3000/season3");
+
+function fetchSeason4(url) {
+    fetch(url)
+    .then (res => res.json())
+    .then (episodes => { 
+        renderSeason(episodes)
+        // spotlightEpisode(episode);
+    })};
+fetchSeason4("http://localhost:3000/season4");
+
+function fetchSeason5(url) {
+    fetch(url)
+    .then (res => res.json())
+    .then (episodes => { 
+        renderSeason(episodes)
+        // spotlightEpisode(episode);
+    })};
+fetchSeason5("http://localhost:3000/season5");
+
 const renderSeason = (seasonObj) => {
     const seasonImg = document.createElement("img")
-    seasonImg.src = seasonObj.image
+    seasonImg.src = seasonObj[0].image
     nav.append(seasonImg)
 }
 
-
-
-
-function fetchEpisode(url) {
-    fetch(url)
-    .then (res => res.json())
-    .then (episodes => episodes.forEach(episode => {
-        console.log(episode)
-        renderSeason(episode)
-        // spotlightEpisode(episode);
-    }));
-}
-fetchEpisode("http://localhost:3000/season1");
