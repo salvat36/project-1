@@ -7,7 +7,7 @@ const spotlightEpisodeList = document.querySelector(".episodes-list") // Episode
 const spotlightImg = document.querySelector("#spotlight-img") // spotLight Images go here
 const seasonDropdown = document.querySelector("#season-dropdown")
 const charDropdown = document.querySelector("#char-dropdown")
-
+const charImg = document.querySelector("#char-img")
 
 
 
@@ -98,21 +98,45 @@ fetchSeason5("http://localhost:3000/season5");
 
 
 
-//renderCharForOption
-function renderCharForOption(charObj) {
-    let charOption = document.createElement("option")
-    charOption.value = charObj.name 
-    charOption.innerText = charObj.name
-    charDropdown.append(charOption)
+//updateImages function to be used for renderCharForOption
+
+function updateImages(){
+    charImg.alt = ".images/404.png"
+    charImg.src = charDropdown.value
+    
+    
 }
 
 
+//renderCharForOption
+function renderCharForOption(charObj) {
+    let charOption = document.createElement("option")
+    charOption.value = charObj.image 
+    charOption.innerText = charObj.name
+    //create event listener for drop down to display image based on character selection
+    
+    seasonDropdown.addEventListener("change", updateImages)
+    charDropdown.append(charOption)
+    
+}
+
+
+
 //FETCH function for character
-fetch ("https://rickandmortyapi.com/api/character")
+fetch ("http://localhost:3000/characters")
 .then (response => response.json())
 .then (charNames => {
     
-    charNames.results.forEach(charName => renderCharForOption(charName))
+    charNames.forEach(charName =>renderCharForOption(charName))
+
+}
+
     
-})
+)
+    
+
+   
+    
+    
+
 
