@@ -8,7 +8,9 @@ const spotlightImg = document.querySelector("#spotlight-img") // spotLight Image
 const seasonDropdown = document.querySelector("#season-dropdown")
 const charDropdown = document.querySelector("#char-dropdown")
 const charImg = document.querySelector("#char-img")
-
+const commentForm = document.querySelector("#comment-form")
+const userComments = document.querySelector("#user-comments")
+const commentInput = document.querySelector("#comment-input")
 
 
 //! HELPER FUNCTIONS
@@ -99,12 +101,9 @@ fetchSeason5("http://localhost:3000/season5");
 
 
 //updateImages function to be used for renderCharForOption
-
 function updateImages(){
     charImg.alt = ".images/404.png"
-    charImg.src = charDropdown.value
-    
-    
+    charImg.src = charDropdown.value    
 }
 
 
@@ -113,25 +112,31 @@ function renderCharForOption(charObj) {
     let charOption = document.createElement("option")
     charOption.value = charObj.image 
     charOption.innerText = charObj.name
-    //create event listener for drop down to display image based on character selection
-    
     seasonDropdown.addEventListener("change", updateImages)
-    charDropdown.append(charOption)
-    
+    charDropdown.append(charOption)   
+}
+
+//handleSubmit function
+const handleSubmit = (e) => {
+    e.preventDefault()
+    let li = document.createElement("li")
+    const userInput = commentInput.value
+    li.innerText = userInput
+
+    userComments.append(li)
+    commentForm.reset()
 }
 
 
+//event listener for user input from comment form
+commentForm.addEventListener("submit", handleSubmit)
 
 //FETCH function for character
 fetch ("http://localhost:3000/characters")
 .then (response => response.json())
-.then (charNames => {
-    
+.then (charNames => {   
     charNames.forEach(charName =>renderCharForOption(charName))
-
-}
-
-    
+    }   
 )
     
 
