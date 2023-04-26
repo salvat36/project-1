@@ -41,10 +41,31 @@ html {
     color: white;
   }
 
-.episodes-list {
+.episodes-list li {
+    text-align: center;
     color: white;
     font-style: italic;
     font-style: Bold;
-    font-size: 2em;
+    font-size: 1.2em;
     font-family: 'OCR A STD' monospace;
+    background-color: rgba(128, 128, 128, 0.582);
+    margin: auto;
+    width: 35%;
+    border: 3px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+    
+
 }
+
+/* li {
+    background-color: blue;
+    border: 6px solid white;
+    border-color: white;
+    padding: 5px;
+    color: black;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    font-size: 0.7em;
+} */

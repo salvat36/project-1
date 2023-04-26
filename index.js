@@ -1,15 +1,19 @@
 //! GLOBAL VARIABLES
+
 const nav = document.querySelector("#movie-nav") // this is where the movie navs go
 const seasonList = document.querySelector("#season-list") // name of all seasons 1-6
 const spotlightSeason = document.querySelector("#spotlight-season") // spotlight spot for season names
 const spotlightEpisodeList = document.querySelector(".episodes-list") // Episode List goes here
 const spotlightImg = document.querySelector("#spotlight-img") // spotLight Images go here
+
 const seasonDropdown = document.querySelector("#season-dropdown")
 const charDropdown = document.querySelector("#char-dropdown")
 const charImg = document.querySelector("#char-img")
 const commentForm = document.querySelector("#comment-form")
 const userComments = document.querySelector("#user-comments")
 const commentInput = document.querySelector("#comment-input")
+
+
 
 
 //! HELPER FUNCTIONS
@@ -40,6 +44,7 @@ const handleNavClick = (seasonClick) => {
     spotlightEpisodeList.innerHTML = ""
     spotlightEpisode(seasonClick);
 }
+
 
 //updateImages function to be used for renderCharForOption
 function updateImages(){
