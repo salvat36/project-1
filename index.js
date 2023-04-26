@@ -39,56 +39,22 @@ const handleNavClick = (seasonClick) => {
 }
 
 
+const allSeasons = [
+fetch("http://localhost:3000/season1"),
+fetch("http://localhost:3000/season2"),
+fetch("http://localhost:3000/season3"),
+fetch("http://localhost:3000/season4"),
+fetch("http://localhost:3000/season5")
+]
 
-
-// Functions GETS Season 1 Data
-function fetchSeason1(url) {
-    fetch(url)
-    .then (res => res.json())
-    .then (episodes => { 
-        renderSeason(episodes)
-        spotlightEpisode(episodes);
-        handleNavClick(episodes)
-    })};
-fetchSeason1("http://localhost:3000/season1");
-
-// Functions GETS Season 2 Data
-function fetchSeason2(url) {
-    fetch(url)
-    .then (res => res.json())
-    .then (episodes => { 
-        renderSeason(episodes)
-        handleNavClick(episodes)
-    })};
-fetchSeason2("http://localhost:3000/season2");
-
-// Functions GETS Season 3 Data
-function fetchSeason3(url) {
-    fetch(url)
-    .then (res => res.json())
-    .then (episodes => { 
-        renderSeason(episodes)
-        // spotlightEpisode(episode);
-    })};
-fetchSeason3("http://localhost:3000/season3");
-
-// Functions GETS Season 4 Data
-function fetchSeason4(url) {
-    fetch(url)
-    .then (res => res.json())
-    .then (episodes => { 
-        renderSeason(episodes)
-        // spotlightEpisode(episode);
-    })};
-fetchSeason4("http://localhost:3000/season4");
-
-// Functions GETS Season 5 Data
-function fetchSeason5(url) {
-    fetch(url)
-    .then (res => res.json())
-    .then (episodes => { 
-        renderSeason(episodes)
-        // spotlightEpisode(episode);
-    })};
-fetchSeason5("http://localhost:3000/season5");
-
+Promise.all(allSeasons)
+.then ((res) => {
+    Promise.all(res.map((season) => {
+        return season.json();
+    }))
+    .then(episodes => episodes.forEach(episode => {
+        spotlightEpisode(episode)
+        renderSeason(episode)
+        handleNavClick(episode)
+    }))
+})
