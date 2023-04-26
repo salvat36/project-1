@@ -6,6 +6,13 @@ const spotlightSeason = document.querySelector("#spotlight-season") // spotlight
 const spotlightEpisodeList = document.querySelector(".episodes-list") // Episode List goes here
 const spotlightImg = document.querySelector("#spotlight-img") // spotLight Images go here
 
+const seasonDropdown = document.querySelector("#season-dropdown")
+const charDropdown = document.querySelector("#char-dropdown")
+const charImg = document.querySelector("#char-img")
+const commentForm = document.querySelector("#comment-form")
+const userComments = document.querySelector("#user-comments")
+const commentInput = document.querySelector("#comment-input")
+
 
 
 
@@ -39,22 +46,63 @@ const handleNavClick = (seasonClick) => {
 }
 
 
-const allSeasons = [
-fetch("http://localhost:3000/season1"),
-fetch("http://localhost:3000/season2"),
-fetch("http://localhost:3000/season3"),
-fetch("http://localhost:3000/season4"),
-fetch("http://localhost:3000/season5")
-]
+//updateImages function to be used for renderCharForOption
+function updateImages(){
+    charImg.alt = ".images/404.png"
+    charImg.src = charDropdown.value    
+}
 
-Promise.all(allSeasons)
-.then ((res) => {
-    Promise.all(res.map((season) => {
-        return season.json();
-    }))
-    .then(episodes => episodes.forEach(episode => {
-        spotlightEpisode(episode)
-        renderSeason(episode)
-        handleNavClick(episode)
-    }))
-})
+
+//renderCharForOption
+function renderCharForOption(charObj) {
+    let charOption = document.createElement("option")
+    charOption.value = charObj.image 
+    charOption.innerText = charObj.name
+    seasonDropdown.addEventListener("change", updateImages)
+    charDropdown.append(charOption)   
+}
+
+//handleSubmit function
+const handleSubmit = (e) => {
+    e.preventDefault()
+    let li = document.createElement("li")
+    const userInput = commentInput.value
+    li.innerText = userInput
+
+    userComments.append(li)
+    commentForm.reset()
+}
+
+
+//event listener for user input from comment form
+commentForm.addEventListener("submit", handleSubmit)
+
+//FETCH function for character
+fetch ("http://localhost:3000/characters")
+.then (response => response.json())
+.then (charNames => {   
+    charNames.forEach(charName =>renderCharForOption(charName))
+    }   
+)
+
+
+//FETCH CALL
+const allSeasons = [
+    fetch("http://localhost:3000/season1"),
+    fetch("http://localhost:3000/season2"),
+    fetch("http://localhost:3000/season3"),
+    fetch("http://localhost:3000/season4"),
+    fetch("http://localhost:3000/season5")
+    ]
+    
+    Promise.all(allSeasons)
+    .then ((res) => {
+        Promise.all(res.map((season) => {
+            return season.json();
+        }))
+        .then(episodes => episodes.forEach(episode => {
+            spotlightEpisode(episode)
+            renderSeason(episode)
+            handleNavClick(episode)
+        }))
+    })
