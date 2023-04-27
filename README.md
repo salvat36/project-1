@@ -1,15 +1,15 @@
 -Brief overview: name, purpose, relevant information on what your project is about
 
-!! PROJECT OVERVIEW !!
+# PROJECT OVERVIEW
 CALLING ALL RICK N' MORTY LOVERS! 
 
 "PROJECT RICK" highlights the infamous TV series "Rick n' Morty". 
 
 The purpose is to pay homage to and showcase the first 5 seasons episodes, and put on display all your beloved characters! 
 
+<br>
 
-
-!! INSTALLATION INSTRUCTIONS !!
+# INSTALLATION INSTRUCTIONS
 
 Step 1: Visit https://github.com/salvat36/project-1 and select "CODE"
 ![Getting Started](images/README_image_1.png)
@@ -36,9 +36,9 @@ Step 7: To access "PROJECT RICK" in a browser,
 -For MAC users: type the command "open index.html" in the terminal
 -For Windows users: type the command "explorer.exe index.html" in the terminal
 
+<br>
 
-
-!! PROJECT RICK USAGE !!
+# PROJECT RICK USAGE
 
 Our project provides various features and functionality including:
 
@@ -52,15 +52,15 @@ Our project provides various features and functionality including:
     //insert pic here
 -For those who would like to, you can play the TV show's theme song while using the application
     //insert pic here
+<br>
 
-
-!! CONTRIBUTE !!
+# CONTRIBUTE
 If you or your friends would like to contribute to our project, please submit bug reports, feature requests, or pull requests to the following e-mail address: 
 
 projectrick@example.com
+<br>
 
-
-!! LICENSING !!
+# LICENSING 
 MIT License
 
 Copyright (c) [2023] [Ryan Salvato, Joseph Stewart, Kevin Lumauig]
@@ -82,15 +82,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+<br>
 
-
-!! CONTACT INFORMATION !!
+# CONTACT INFORMATION
 rjk@example.com
 
 If you have any questions or feedback, feel free to reach out
 
-
-!! ACKNOWLEDGMENTS !!
+<br>
+# ACKNOWLEDGMENTS
 API key provided by: https://rickandmortyapi.com
 
 Images provided by:

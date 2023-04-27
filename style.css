@@ -1,71 +1,106 @@
 #movie-nav {
-    float: left;
-    margin: auto;
-    width: 50%;
-    border: 6px;
-    border-color: black;
-    padding: 10px;
+  float: left;
+  margin: auto;
+  width: 50%;
+  border: 6px;
+  border-color: black;
+  padding: 10px;
 }
-
 #main-header {
-    text-align: center;
-    margin: auto;
-    width: 50%;
-    border: 3px;
-    padding: 10px;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
 }
-
-html { 
-    background: url(images/background3.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  body {
-    color: #fff;
-  }
-
-  #season-list {
-    font-family: -apple-system, 'Get Shwifty';
-  }
-
-
-  #spotlight-season {
-    margin: auto;
-    width: 50%;
-    border: 3px;
-    border-color: black;
-    padding: 10px;
-    color: white;
-  }
-
+html {
+  background: url(images/background3.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: url('images/cursor.png'), default;
+}
+body {
+  color: #fff;
+}
+#season-list {
+  font-family: -apple-system, 'Get Shwifty';
+}
+#spotlight-season {
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  border-color: black;
+  padding: 10px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
 .episodes-list li {
-    text-align: center;
-    color: white;
-    font-style: italic;
-    font-style: Bold;
-    font-size: 1.2em;
-    font-family: 'OCR A STD' monospace;
-    background-color: rgba(128, 128, 128, 0.582);
-    margin: auto;
-    width: 35%;
-    border: 3px solid white;
-    padding: 10px;
-    box-sizing: border-box;
-    
-
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-style: Bold;
+  font-size: 1.2em;
+  font-family: 'OCR A STD' monospace;
+  background-color: rgba(6, 191, 49, 0.571);
+  margin-left: auto;
+  width: 35%;
+  border: 3px solid white;
+  padding: 15px;
+  box-sizing: border-box;
 }
-
-/* li {
-    background-color: blue;
-    border: 6px solid white;
-    border-color: white;
-    padding: 5px;
-    color: black;
-    margin: auto;
-    width: 400px;
-    height: 200px;
-    font-size: 0.7em;
-} */
+#spotlight-image {
+width: 50%;
+}
+#comment-input {
+justify-content: center;
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-style: Bold;
+  font-size: 1.2em;
+  font-family: 'OCR A STD' monospace;
+  background-color: rgba(56, 191, 49, 0.571);
+  margin-left: auto;
+  width: 35%;
+  border: 3px solid white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+#user-comments {
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-style: Bold;
+  font-size: 1.2em;
+  font-family: 'OCR A STD' monospace;
+  background-color: rgba(56, 191, 49, 0.571);
+  margin-left: auto;
+  width: 35%;
+  border: 3px solid white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+#char-dropdown {
+  background-color: rgba(56, 191, 49, 0.571);
+  margin-left: auto;
+  width: 35%;
+  border: 3px solid white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+#char-img {
+margin-right: auto;
+}
+h3 {
+color: white;
+}
+#video {
+margin-left: auto;
+width: 40%;
+}
+img {
+width: 200px;
+}

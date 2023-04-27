@@ -22,7 +22,7 @@ const spotlightEpisode = (episodeObj) => {
 spotlightImg.src = episodeObj[0].image
 episodeObj.forEach(episode => {
     let episodeList = document.createElement("li")
-    episodeList.innerText = episode.name
+    episodeList.innerText = episode.name + " " + `\nAir Date: ${episode.air_date}`  
     spotlightEpisodeList.append(episodeList)       
 })
 }
@@ -48,7 +48,7 @@ const handleNavClick = (seasonClick) => {
 
 //updateImages function to be used for renderCharForOption
 function updateImages(){
-    charImg.alt = ".images/404.png"
+    charImg.alt = "images/404.png"
     charImg.src = charDropdown.value    
 }
 
