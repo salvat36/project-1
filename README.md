@@ -83,7 +83,9 @@ SOFTWARE.
 <br>
 
 # CONTACT INFORMATION
-rjk@example.com
+Ryan Salvato (https://github.com/salvat36)
+Joseph Stewart (https://github.com/JosephStewart22)
+Kevin Lumauig (https://github.com/klums24)
 
 If you have any questions or feedback, feel free to reach out
 
