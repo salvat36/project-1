@@ -43,15 +43,13 @@ Step 7: To access "PROJECT RICK" in a browser,
 Our project provides various features and functionality including:
 
 -You can click on an individual season's image to display a full list of corresponding episodes
-    //insert pic here
+![Getting Started](images/gif1.gif)
 -You can access the show's list of characters from a drop-down menu and see a detailed image of the selected character
-    //insert pic here
+![Getting Started](images/gif2.gif)
 -You will be able to submit your favorite character using a form and have it shown in the comments section
-    //insert pic here
--You'll notice when using our application, your mouse pointer will transform into the iconic "Pickle Rick"!
-    //insert pic here
+![Getting Started](images/gif3.gif)
 -For those who would like to, you can play the TV show's theme song while using the application
-    //insert pic here
+![Getting Started](images/gif4.gif)
 <br>
 
 # CONTRIBUTE
@@ -91,6 +89,11 @@ If you have any questions or feedback, feel free to reach out
 
 <br>
 # ACKNOWLEDGMENTS
+Created by: 
+Ryan Salvato
+Joseph Stewart
+Kevin Lumauig
+
 API key provided by: https://rickandmortyapi.com
 
 Images provided by:
